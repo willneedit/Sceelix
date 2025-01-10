@@ -7,8 +7,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sceelix.Designer.Props</RootNamespace>
     <AssemblyName>Sceelix.Designer.Props</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <Import Project="..\DigitalRune.targets" />

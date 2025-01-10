@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sceelix.Designer.Meshes</RootNamespace>
     <AssemblyName>Sceelix.Designer.Meshes</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <CreateDocumentation>true</CreateDocumentation>
     <TargetFrameworkProfile />

@@ -6,6 +6,7 @@ namespace Sceelix.Core.Extensions
 {
     internal static class MethodExtension
     {
+#if false
         public static T GetCustomAttribute<T>(this MemberInfo type) where T : Attribute
         {
             object firstOrDefault = type.GetCustomAttributes(true).FirstOrDefault(val => val is T);
@@ -14,7 +15,7 @@ namespace Sceelix.Core.Extensions
 
             return null;
         }
-
+#endif
 
 
         public static string GetMethodSignature(this MethodInfo methodInfo)
