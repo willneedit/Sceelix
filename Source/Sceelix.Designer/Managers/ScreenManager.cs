@@ -70,7 +70,7 @@ namespace Sceelix.Designer.Managers
             DesignerProgram.Log.Debug("Loading Theme.");
 
             //Theme theme = contentManager.Load<Theme>("UI Themes/Sceelix/ThemeDark");
-            _theme = contentManager.Load<Theme>("UI Themes/Sceelix/ThemeRed");
+            _theme = contentManager.Load<Theme>("UI Themes/Sceelix/ThemeDark");
 
             DesignerProgram.Log.Debug("Loading Renderer.");
 
