@@ -1,0 +1,3 @@
+[submodule "Extras/Unity Plugin/Unity_Sceelix_Plugin"]
+	path = Extras/Unity Plugin/Unity_Sceelix_Plugin
+	url = https://github.com/willneedit/Unity_Sceelix_Plugin.git
