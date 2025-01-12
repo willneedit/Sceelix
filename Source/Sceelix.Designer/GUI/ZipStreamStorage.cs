@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using DigitalRune.Storages;
-using Ionic.Zip;
+using System.IO.Compression;
 
 namespace Sceelix.Designer.GUI
 {
@@ -37,7 +37,7 @@ namespace Sceelix.Designer.GUI
 
         private readonly object _lock = new object();
         //private readonly Stream _zipStream;
-        private readonly ZipFile _zipFile;
+        private readonly ZipArchive _zipFile;
 
 #if ANDROID
 // A list of all temp files created in this session.
@@ -133,7 +133,7 @@ namespace Sceelix.Designer.GUI
 
             try
             {
-                _zipFile = ZipFile.Read(zipStream);
+                _zipFile = new ZipArchive(zipStream);
                 return;
             }
             catch
@@ -180,11 +180,8 @@ namespace Sceelix.Designer.GUI
         public override string GetRealPath(string path)
         {
             path = NormalizePath(path);
-            var zipEntry = _zipFile[path];
-            if (zipEntry != null && !zipEntry.IsDirectory)
-                return Storage.GetRealPath(FileName);
-
-            return null;
+            ZipArchiveEntry entry = _zipFile.GetEntry(path);
+            return entry != null ? Storage.GetRealPath(FileName) : null;
         }
 
 
@@ -300,14 +297,18 @@ namespace Sceelix.Designer.GUI
                 // Example: The ContentManager reads "Model.xnb". While the "Model.xnb"
                 // is still open, the ContentManager starts to read "Texture.xnb".
                 // --> ZIP entries need to be copied into a temporary memory stream.
-                var zipEntry = _zipFile[path];
-                if (zipEntry != null && !zipEntry.IsDirectory)
+                ZipArchiveEntry zipEntry = _zipFile.GetEntry(path);
+
+                if (zipEntry != null)
                 {
                     string password = (PasswordCallback != null) ? PasswordCallback(path) : null;
 
                     // Extract ZIP entry to memory.
-                    var uncompressedStream = new MemoryStream((int) zipEntry.UncompressedSize);
-                    zipEntry.ExtractWithPassword(uncompressedStream, password);
+                    var uncompressedStream = new MemoryStream();
+                    using (Stream stream = zipEntry.Open())
+                    {
+                        stream.CopyTo(uncompressedStream);
+                    }
 
                     // Reset memory stream for reading.
                     uncompressedStream.Position = 0;

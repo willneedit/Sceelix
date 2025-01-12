@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading;
 using DigitalRune.Game.UI;
 using DigitalRune.Game.UI.Controls;
 using DigitalRune.Mathematics.Algebra;
-using Ionic.Zip;
 using Microsoft.Xna.Framework.Graphics;
 using Sceelix.Designer.GUI.Controls;
 using Sceelix.Designer.GUI.Windows;
@@ -24,7 +24,7 @@ namespace Sceelix.Designer.GUI
         private Button _cancelButton;
 
         private ProgressBar _progressBar;
-        private bool _shouldCancel;
+        // private bool _shouldCancel;
         private TextBlock _textBlock;
 
 
@@ -176,32 +176,7 @@ namespace Sceelix.Designer.GUI
         {
             try
             {
-                int entryIndex = 1;
-
-                using (ZipFile zipfile = ZipFile.Read(_zipFilePath))
-                {
-                    var totalFileNumber = zipfile.Entries.Count(x => !x.IsDirectory);
-
-                    foreach (ZipEntry entry in zipfile)
-                    {
-                        var entryName = entry.FileName;
-
-                        if (_shouldCancel)
-                        {
-                            _synchronizer.Enqueue(Cancel);
-                            break;
-                        }
-
-                        _synchronizer.Enqueue(delegate
-                        {
-                            _textBlock.Text = "Extracting " + entryName + " (" + entryIndex++ + " of " + totalFileNumber + ").";
-                            _textBlock.MinWidth = Math.Max(_textBlock.ActualWidth, _textBlock.MinWidth);
-                        });
-
-                        entry.Extract(_destinationFolder, ExtractExistingFileAction.OverwriteSilently);
-                    }
-                }
-
+                ZipFile.ExtractToDirectory(_zipFilePath, _destinationFolder);
                 _synchronizer.Enqueue(Accept);
             }
             catch (Exception ex)
@@ -215,7 +190,7 @@ namespace Sceelix.Designer.GUI
 
         private void CancelButtonOnClick(object sender, EventArgs e)
         {
-            _shouldCancel = true;
+            // _shouldCancel = true;
         }
 
 

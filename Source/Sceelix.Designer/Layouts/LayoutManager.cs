@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using DigitalRune.Animation;
 using DigitalRune.Animation.Easing;
@@ -9,7 +10,6 @@ using DigitalRune.Game.Input;
 using DigitalRune.Game.UI;
 using DigitalRune.Game.UI.Controls;
 using DigitalRune.Mathematics.Algebra;
-using Ionic.Zip;
 using Sceelix.Designer.Annotations;
 using Sceelix.Designer.GUI.MenuControls;
 using Sceelix.Designer.GUI.Windows;
@@ -80,16 +80,13 @@ namespace Sceelix.Designer.Layouts
 
         private void RefreshLayoutsFromEmbeddedZip()
         {
-            ZipFile zipFile = ZipFile.Read(EmbeddedResources.Load<Stream>("Resources/Layouts.zip",false));
-            foreach (ZipEntry zipEntry in zipFile)
+            ZipArchive zipFile = new ZipArchive(EmbeddedResources.Load<Stream>("Resources/Layouts.zip",false));
+            foreach (ZipArchiveEntry zipEntry in zipFile.Entries)
             {
-                var name = Path.GetFileNameWithoutExtension(zipEntry.FileName);
+                var name = Path.GetFileNameWithoutExtension(zipEntry.Name);
 
-                using (MemoryStream stream = new MemoryStream())
+                using (Stream stream = zipEntry.Open())
                 {
-                    zipEntry.Extract(stream);
-                    stream.Seek(0, SeekOrigin.Begin);
-
                     _availableLayouts.Add(Layout.FromStream(name, stream));
                 }
             }
