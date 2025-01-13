@@ -1,3 +1,6 @@
 [submodule "Extras/Unity Plugin/Unity_Sceelix_Plugin"]
 	path = Extras/Unity Plugin/Unity_Sceelix_Plugin
 	url = https://github.com/willneedit/Unity_Sceelix_Plugin.git
+[submodule "Extras/Net3dBool"]
+	path = Extras/Net3dBool
+	url = https://github.com/willneedit/Net3dBool.git

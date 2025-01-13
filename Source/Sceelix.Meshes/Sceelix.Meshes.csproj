@@ -39,6 +39,7 @@
   <Import Project="..\Common.targets" />
   <ItemGroup>
     <Compile Include="Algorithms\Clipper.cs" />
+    <Compile Include="Algorithms\Tessellation.cs" />
     <Compile Include="Data\BillboardEntity.cs" />
     <Compile Include="Data\MeshEntity.cs" />
     <Compile Include="Data\MeshInstanceEntity.cs" />
@@ -77,9 +78,11 @@
     <Compile Include="Parameters\MeshPropertyParameter.cs" />
     <Compile Include="Parameters\MeshSeparateParameter.cs" />
     <Compile Include="Procedures\BillboardCreateProcedure.cs" />
+    <Compile Include="Procedures\MeshBooleanProcedure.cs" />
     <Compile Include="Procedures\MeshClipProcedure.cs" />
     <Compile Include="Procedures\MeshCreateProcedure.cs" />
     <Compile Include="Procedures\MeshDecomposeProcedure.cs" />
+    <Compile Include="Procedures\MeshDistortionProcedure.cs" />
     <Compile Include="Procedures\MeshDivideProcedure.cs" />
     <Compile Include="Procedures\MeshFlipProcedure.cs" />
     <Compile Include="Procedures\MeshInstanceCreateProcedure.cs" />
@@ -89,7 +92,9 @@
     <Compile Include="Procedures\MeshModifyProcedure.cs" />
     <Compile Include="Procedures\MeshSplitProcedure.cs" />
     <Compile Include="Procedures\MeshSubselectProcedure.cs" />
+    <Compile Include="Procedures\MeshTessellateProcedure.cs" />
     <Compile Include="Procedures\MeshUnifyProcedure.cs" />
+    <Compile Include="Procedures\MeshUVAtlasProcedure.cs" />
     <Compile Include="Procedures\MeshUVMapProcedure.cs" />
     <Compile Include="Procedures\MeshLoadProcedure.cs" />
     <Compile Include="Procedures\MeshSaveProcedure.cs" />
@@ -131,6 +136,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\StraightSkeleton\StraightSkeletonNet.dll</HintPath>
     </Reference>
+    <ProjectReference Include="..\..\Extras\Net3dBool\src\Net3dBool\Net3dBool.csproj">
+      <Project>{0534baa3-a47f-4e48-ad92-7898ecd1812d}</Project>
+      <Name>Net3dBool</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">
       <Project>{ec8dca01-51c6-4057-b83f-233bcd3c287d}</Project>
       <Name>Sceelix.Actors</Name>

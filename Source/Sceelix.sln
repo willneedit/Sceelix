@@ -153,6 +153,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sceelix.Documentation", "Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sceelix.Designer.PreBuildProject", "Sceelix.Designer.PreBuildProject\Sceelix.Designer.PreBuildProject.csproj", "{C9F050DF-CA90-490E-9044-658BD50197CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net3dBool", "..\Extras\Net3dBool\src\Net3dBool\Net3dBool.csproj", "{0534BAA3-A47F-4E48-AD92-7898ECD1812D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Linux = Debug|Linux
@@ -733,6 +735,22 @@ Global
 		{C9F050DF-CA90-490E-9044-658BD50197CF}.Release|Windows32.Build.0 = Release|Any CPU
 		{C9F050DF-CA90-490E-9044-658BD50197CF}.Release|Windows64.ActiveCfg = Release|Any CPU
 		{C9F050DF-CA90-490E-9044-658BD50197CF}.Release|Windows64.Build.0 = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Linux.ActiveCfg = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Linux.Build.0 = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|MacOS.ActiveCfg = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|MacOS.Build.0 = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Windows32.ActiveCfg = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Windows32.Build.0 = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Windows64.ActiveCfg = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Debug|Windows64.Build.0 = Debug|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Linux.ActiveCfg = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Linux.Build.0 = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|MacOS.ActiveCfg = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|MacOS.Build.0 = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Windows32.ActiveCfg = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Windows32.Build.0 = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Windows64.ActiveCfg = Release|Any CPU
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D}.Release|Windows64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -775,6 +793,7 @@ Global
 		{5374562C-801C-4231-B0CC-6C81FC9B117B} = {49BB6742-1825-4546-8087-AFFFCA9C6F42}
 		{3C679A3A-0955-45FB-9CB5-98C5C545A8B6} = {658B1D18-D08F-4134-AEA7-82713FDC128A}
 		{C9F050DF-CA90-490E-9044-658BD50197CF} = {49BB6742-1825-4546-8087-AFFFCA9C6F42}
+		{0534BAA3-A47F-4E48-AD92-7898ECD1812D} = {3D4F5D0E-7908-410D-BE1C-7054E067548B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D4DE7039-7664-4CE9-948C-8EFF844FE961}
