@@ -4,11 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using System.IO.Compression;
 using DigitalRune.Game;
 using DigitalRune.Game.UI;
 using DigitalRune.Game.UI.Controls;
 using DigitalRune.Mathematics.Algebra;
-using Ionic.Zip;
 using Microsoft.Xna.Framework.Graphics;
 using Newtonsoft.Json;
 using Sceelix.Annotations;
@@ -29,6 +29,7 @@ using Sceelix.Extensions;
 using HorizontalAlignment = DigitalRune.Game.UI.HorizontalAlignment;
 using Orientation = DigitalRune.Game.UI.Orientation;
 using TextBox = DigitalRune.Game.UI.Controls.TextBox;
+using System.Text;
 
 
 namespace Sceelix.Designer.Unity3D.GUI
@@ -174,8 +175,6 @@ namespace Sceelix.Designer.Unity3D.GUI
             }
         }
 
-
-
         private void PerformExport(ProgressWindow.ProgressHandler progressHandler)
         {
             var innerZipName = "Data";
@@ -184,27 +183,32 @@ namespace Sceelix.Designer.Unity3D.GUI
             progressHandler.SetText("Packaging Assets...");
 
             //create a zip with the whole folder structure
-            using (ZipFile zip = new ZipFile())
-            {
-                zip.AddDirectory(FileItem.Project.BaseFolder.FullPath);
-                zip.Save(innerZipName);
-            }
-
+            ZipFile.CreateFromDirectory(FileItem.Project.BaseFolder.FullPath, innerZipName);
 
             //store the key inside the project file
             String meta = String.Empty;
 
+            // Remains from Sceelix source ... prior to 1.0.0.0 ?
+            //outerZip.Encryption = EncryptionAlgorithm.WinZipAes256;
+            //outerZip.Password = @"R6gPSgMa9LQtgZ{~j<:%{@8IEge5]e.']K,pPSao<\({ZhCa\h";
 
-            //create a zip with the zipped project inside and 
-            using (ZipFile outerZip = new ZipFile())
+            using (ZipArchive zipArchive = ZipFile.Open(outerZipName, ZipArchiveMode.Create))
             {
-                //outerZip.Encryption = EncryptionAlgorithm.WinZipAes256;
-                //outerZip.Password = @"R6gPSgMa9LQtgZ{~j<:%{@8IEge5]e.']K,pPSao<\({ZhCa\h";
+                ZipArchiveEntry dataEntry = zipArchive.CreateEntry(innerZipName);
+                using (Stream dataStream = dataEntry.Open())
+                {
+                    using (Stream innerZipStream = File.OpenRead(innerZipName))
+                    {
+                        innerZipStream.CopyTo(dataStream);
+                    }
+                }
 
-                outerZip.AddFile(innerZipName);
-                outerZip.AddEntry("Meta", meta);
-
-                outerZip.Save(outerZipName);
+                ZipArchiveEntry metaEntry = zipArchive.CreateEntry(outerZipName);
+                using (Stream metaStream = metaEntry.Open())
+                {
+                    byte[] metaData = Encoding.UTF8.GetBytes(meta);
+                    metaStream.Write(metaData, 0, metaData.Length);
+                }
             }
 
             if (progressHandler.ShouldCancel)

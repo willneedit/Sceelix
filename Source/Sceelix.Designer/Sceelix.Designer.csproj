@@ -323,10 +323,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Reference Include="DotNetZip">
-      <HintPath>..\..\Packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="ImageProcessor, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\ImageProcessor.2.3.2.0\lib\net40\ImageProcessor.dll</HintPath>
       <Private>True</Private>

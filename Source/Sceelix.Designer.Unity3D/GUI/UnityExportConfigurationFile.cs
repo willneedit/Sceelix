@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Ionic.Zip;
 using Microsoft.Xna.Framework.Graphics;
 using Sceelix.Designer.ProjectExplorer.FileHandlers;
 using Sceelix.Designer.ProjectExplorer.GUI;
