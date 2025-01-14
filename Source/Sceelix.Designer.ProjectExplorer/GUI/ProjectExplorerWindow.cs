@@ -365,7 +365,7 @@ namespace Sceelix.Designer.ProjectExplorer.GUI
                 LoadProject(Project.DefaultTutorialFile);
             else
             {
-                ExtractFolderWindow filesWindow = new ExtractFolderWindow(Project.DefaultTutorialZip, SceelixApplicationInfo.ExtrasFolder);
+                ExtractFolderWindow filesWindow = new ExtractFolderWindow(Project.DefaultTutorialZip, Project.DefaultTutorialFolder);
                 filesWindow.Show(Screen);
                 filesWindow.Accepted += delegate { LoadProject(Project.DefaultTutorialFile); };
             }

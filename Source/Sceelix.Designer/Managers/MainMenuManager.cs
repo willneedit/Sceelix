@@ -152,7 +152,7 @@ namespace Sceelix.Designer.Managers
             {
                 var zipFilePath = Path.Combine(SceelixApplicationInfo.ContentFolder, folder + ".zip");
 
-                ExtractFolderWindow filesWindow = new ExtractFolderWindow(zipFilePath, SceelixApplicationInfo.ExtrasFolder);
+                ExtractFolderWindow filesWindow = new ExtractFolderWindow(zipFilePath, Path.Combine(SceelixApplicationInfo.ExtrasFolder, folder));
                 
                 filesWindow.Accepted += delegate
                 {
