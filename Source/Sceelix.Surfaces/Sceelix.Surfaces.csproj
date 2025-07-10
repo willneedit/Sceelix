@@ -53,69 +53,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversions\StreamConversions.cs" />
-    <Compile Include="Data\BlendLayer.cs" />
-    <Compile Include="Data\FloatLayer.cs" />
-    <Compile Include="Data\HeightLayer.cs" />
-    <Compile Include="Data\I3DLayer.cs" />
-    <Compile Include="Data\NormalLayer.cs" />
-    <Compile Include="Data\RoundingMethod.cs" />
-    <Compile Include="Data\SampleMethod.cs" />
-    <Compile Include="Data\SurfaceEntity.cs" />
-    <Compile Include="Data\GenericSurfaceLayer.cs" />
-    <Compile Include="Data\SurfaceLayer.cs" />
-    <Compile Include="Data\SurfaceLayerExtensions.cs" />
-    <Compile Include="Extensions\SurfaceBlendExtensions.cs" />
-    <Compile Include="Extensions\SurfaceHeightExtensions.cs" />
-    <Compile Include="Extensions\SurfaceNormalExtensions.cs" />
-    <Compile Include="Extensions\SurfaceInterpolationExtensions.cs" />
-    <Compile Include="Extensions\SurfaceSampleMethodExtensions.cs" />
-    <Compile Include="Extensions\SurfaceUVExtensions.cs" />
-    <Compile Include="Handles\NewSurfaceManipulateHandle.cs" />
-    <Compile Include="Handles\SurfaceManipulateHandle.cs" />
-    <Compile Include="Materials\BlendColorSurfaceMaterial.cs" />
-    <Compile Include="Materials\ColorSurfaceMaterial.cs" />
-    <Compile Include="Materials\DefaultSurfaceMaterial.cs" />
-    <Compile Include="Materials\FurSurfaceMaterial.cs" />
-    <Compile Include="Materials\MultiTextureSurfaceMaterial.cs" />
-    <Compile Include="Materials\SingleTextureSurfaceMaterial.cs" />
-    <Compile Include="Materials\SurfaceMaterial.cs" />
-    <Compile Include="Parameters\SurfacePropertyParameter.cs" />
-    <Compile Include="Parameters\FromSurfaceMeshParameter.cs" />
-    <Compile Include="Data\HoleLayer.cs" />
-    <Compile Include="Parameters\SurfaceSeparateParameter.cs" />
-    <Compile Include="Procedures\Adjust\SurfaceAdjustParameter.cs" />
-    <Compile Include="Procedures\Create\EmptySurfaceParameter.cs" />
-    <Compile Include="Procedures\Create\FromMeshSurfaceParameter.cs" />
-    <Compile Include="Procedures\Create\PerlinSurfaceParameter.cs" />
-    <Compile Include="Procedures\Create\RampSurfaceParameter.cs" />
-    <Compile Include="Procedures\Create\SurfaceCreateParameter.cs" />
-    <Compile Include="Procedures\Create\TileableSurfaceParameter.cs" />
-    <Compile Include="Procedures\Material\BlendColorSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\ColorSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\DefaultSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\FurTextureSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\MultiTextureSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\SingleTextureSurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\SurfaceMaterialParameter.cs" />
-    <Compile Include="Procedures\Material\SurfaceMaterialProcedure.cs" />
-    <Compile Include="Procedures\SurfaceCropProcedure.cs" />
-    <Compile Include="Procedures\SurfaceDivideProcedure.cs" />
-    <Compile Include="Procedures\SurfacePaintProcedure.cs" />
-    <Compile Include="Procedures\SurfaceSampleProcedure.cs" />
-    <Compile Include="Procedures\SurfaceSplitProcedure.cs" />
-    <Compile Include="Procedures\SurfaceSubselectProcedure.cs" />
-    <Compile Include="Procedures\Adjust\MeshOnSurfaceAdjustParameter.cs" />
-    <Compile Include="Procedures\Adjust\SurfaceAdjustProcedure.cs" />
-    <Compile Include="Procedures\SurfaceCombineProcedure.cs" />
-    <Compile Include="Procedures\Create\SurfaceCreateProcedure.cs" />
-    <Compile Include="Procedures\SurfaceDecomposeProcedure.cs" />
-    <Compile Include="Procedures\SurfaceLoadProcedure.cs" />
-    <Compile Include="Procedures\SurfaceMergeProcedure.cs" />
-    <Compile Include="Procedures\SurfacePlaceProcedure.cs" />
-    <Compile Include="Procedures\SurfaceModifyProcedure.cs" />
-    <Compile Include="Procedures\SurfaceSaveProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

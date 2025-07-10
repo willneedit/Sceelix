@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\FireEntity.cs" />
-    <Compile Include="Data\Ocean.cs" />
-    <Compile Include="Procedures\PropCreateProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

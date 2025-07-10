@@ -48,28 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\StaticPathEdge.cs" />
-    <Compile Include="Data\PathEdge.cs" />
-    <Compile Include="Data\PathEntity.cs" />
-    <Compile Include="Data\PathVertex.cs" />
-    <Compile Include="Handles\PathDrawHandle.cs" />
-    <Compile Include="Helpers\PathEntityHelper.cs" />
-    <Compile Include="Parameters\MeshOnSurfacePainting.cs" />
-    <Compile Include="Parameters\PathSeparateParameter.cs" />
-    <Compile Include="Parameters\PathOnSurfaceAdjustParameter.cs" />
-    <Compile Include="Parameters\PathOnSurfacePainting.cs" />
-    <Compile Include="Parameters\PathPropertyParameter.cs" />
-    <Compile Include="Parameters\MeshFromPathParameter.cs" />
-    <Compile Include="Parameters\PathPlacementParameter.cs" />
-    <Compile Include="Procedures\PathDivideProcedure.cs" />
-    <Compile Include="Procedures\PathSubselectProcedure.cs" />
-    <Compile Include="Procedures\PathDecomposeProcedure.cs" />
-    <Compile Include="Procedures\PathCreateProcedure.cs" />
-    <Compile Include="Procedures\PathMergeProcedure.cs" />
-    <Compile Include="Procedures\PathModifyProcedure.cs" />
-    <Compile Include="Algorithms\Voronoi.cs" />
-    <Compile Include="Algorithms\VoronoiElements.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

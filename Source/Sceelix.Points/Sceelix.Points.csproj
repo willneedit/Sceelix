@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\PointEntity.cs" />
-    <Compile Include="Data\PointSetEntity.cs" />
-    <Compile Include="Parameters\CreateFromPointsParameter.cs" />
-    <Compile Include="Procedures\PointsCreateProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

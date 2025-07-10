@@ -45,21 +45,21 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversions\MaterialConversion.cs" />
-    <Compile Include="Data\GenericMaterial.cs" />
-    <Compile Include="Parameters\DirectionSelectionChoiceParameter.cs" />
-    <Compile Include="Resolution\ActorTransformResolver.cs" />
-    <Compile Include="Data\ActorGroup.cs" />
-    <Compile Include="Data\IActor.cs" />
-    <Compile Include="Data\Material.cs" />
-    <Compile Include="Parameters\ActorPropertyParameter.cs" />
-    <Compile Include="Procedures\ActorGroupProcedure.cs" />
-    <Compile Include="Procedures\ActorInsertProcedure.cs" />
-    <Compile Include="Procedures\ActorScopeProcedure.cs" />
-    <Compile Include="Procedures\ActorRotateProcedure.cs" />
-    <Compile Include="Procedures\ActorScaleProcedure.cs" />
-    <Compile Include="Procedures\ActorTranslateProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">

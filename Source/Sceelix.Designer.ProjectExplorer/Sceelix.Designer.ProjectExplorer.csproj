@@ -53,66 +53,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Annotations\ProjectExplorerServiceAttribute.cs" />
-    <Compile Include="FileHandlers\DefaultFileHandler.cs" />
-    <Compile Include="FileHandlers\FileCreationHelper.cs" />
-    <Compile Include="FileHandlers\FileHandlerManager.cs" />
-    <Compile Include="FileHandlers\FileCreator.cs" />
-    <Compile Include="FileHandlers\IFileHandler.cs" />
-    <Compile Include="FileHandlers\Images\ImageHandler.cs" />
-    <Compile Include="FileHandlers\Images\ImageDocumentControl.cs" />
-    <Compile Include="FileHandlers\Text\TextHandler.cs" />
-    <Compile Include="GUI\DocumentControl.cs" />
-    <Compile Include="GUI\DocumentTabControl.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     <Compile Include="GUI\LogWindowEntry.cs">
       <DependentUpon>LogWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LogWindow.cs" />
-    <Compile Include="GUI\DocumentAreaWindow.cs" />
-    <Compile Include="GUI\DocumentTabItem.cs" />
-    <Compile Include="GUI\ImportFilesWindow.cs" />
-    <Compile Include="GUI\CreateFileWindow.cs" />
-    <Compile Include="GUI\ProjectExplorerWindow.cs" />
-    <Compile Include="GUI\NewProjectWindow.cs" />
-    <Compile Include="FileHandlers\Text\TextEditorDocumentControl.cs" />
-    <Compile Include="GUI\ProjectTreeItem.cs" />
-    <Compile Include="Logging\LogWindowLogger.cs" />
-    <Compile Include="Management\FileItem.cs" />
-    <Compile Include="Management\FolderItem.cs" />
-    <Compile Include="Management\LogSettings.cs" />
-    <Compile Include="Management\Project.cs" />
-    <Compile Include="Management\ProjectExplorerSettings.cs" />
-    <Compile Include="Management\ProjectHistorySettings.cs" />
-    <Compile Include="Management\ProjectIO.cs" />
-    <Compile Include="Management\ProjectItem.cs" />
-    <Compile Include="Messages\CorruptFileContent.cs" />
-    <Compile Include="Messages\DelayedMessage.cs" />
-    <Compile Include="Messages\DocumentActivated.cs" />
-    <Compile Include="Messages\FileContentChanged.cs" />
-    <Compile Include="Messages\FileCreated.cs" />
-    <Compile Include="Messages\FileDeleted.cs" />
-    <Compile Include="Messages\FileImported.cs" />
-    <Compile Include="Messages\LogMessageSent.cs" />
-    <Compile Include="Messages\ProjectItemMoved.cs" />
-    <Compile Include="Messages\OpenFile.cs" />
-    <Compile Include="Messages\FileOpened.cs" />
-    <Compile Include="Messages\FileRenamed.cs" />
-    <Compile Include="Messages\FileSaved.cs" />
-    <Compile Include="Messages\GenericMessage.cs" />
-    <Compile Include="Messages\LogMessageClear.cs" />
-    <Compile Include="Messages\OpenDocumentForm.cs" />
-    <Compile Include="Messages\OwnerClosed.cs" />
-    <Compile Include="Messages\PanelResized.cs" />
-    <Compile Include="Messages\ProjectInfoDispatch.cs" />
-    <Compile Include="Messages\ProjectInfoRequest.cs" />
-    <Compile Include="Messages\ProjectItemsDropped.cs" />
-    <Compile Include="Messages\ProjectLoaded.cs" />
-    <Compile Include="Messages\ReloadGraphRequest.cs" />
-    <Compile Include="Messages\ShowPropertiesRequest.cs" />
-    <Compile Include="LogPersistenceService.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FileFolderMenuManager.cs" />
-    <Compile Include="Services\MiscProjectService.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">

@@ -26,18 +26,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Translators\Materials\BlendColorSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\ColorSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\OtherSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\ISurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\MultiTextureSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\FurTextureSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\DefaultSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\Materials\SingleTextureSurfaceMaterialTranslator.cs" />
-    <Compile Include="Translators\SurfaceTranslator.cs" />
-    <Compile Include="Translators\Materials\SurfaceMaterialTranslator.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\SurfaceCollisionHelper.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

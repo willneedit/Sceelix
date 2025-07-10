@@ -24,21 +24,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActorGroupTranslator.cs" />
-    <Compile Include="Annotations\MaterialTranslatorAttribute.cs" />
-    <Compile Include="Components\ScopeHighlightComponent.cs" />
-    <Compile Include="Materials\MaterialTranslator.cs" />
-    <Compile Include="ParameterEditors\ColorParameterEditor.cs" />
-    <Compile Include="ParameterEditors\Vector2DParameterEditor.cs" />
-    <Compile Include="ParameterEditors\Vector3DParameterEditor.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\BoxScopeUtils.cs" />
-    <Compile Include="Utils\DigitalRuneConvert.cs" />
-    <Compile Include="Utils\XNAConvert.cs" />
-    <Compile Include="VertexTypes\VertexPosition.cs" />
-    <Compile Include="VertexTypes\VertexPositionNormalColor2Texture.cs" />
-    <Compile Include="VertexTypes\VertexPositionNormalTextureTangents.cs" />
-    <Compile Include="VertexTypes\VertexPositionTexture.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

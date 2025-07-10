@@ -55,123 +55,123 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Annotations\ParameterEditorAttribute.cs" />
-    <Compile Include="Entities\EntitySelectionManager.cs" />
-    <Compile Include="Extensions\TextureExtensions.cs" />
-    <Compile Include="Extensions\UnprocessedEntityExtensions.cs" />
-    <Compile Include="GUI\Execution\BenchmarkExecutionBinding.cs" />
-    <Compile Include="GUI\Execution\GraphExecutionManager.cs" />
-    <Compile Include="Inspector\Entities\PropertyController.cs" />
-    <Compile Include="Inspector\Entities\EntityInspectorControl.cs" />
-    <Compile Include="Inspector\Entities\GeneralController.cs" />
-    <Compile Include="Inspector\Entities\SubObjects\KeyValueInspectionInfo.cs" />
-    <Compile Include="Inspector\Entities\SubObjects\EntityGroupInspectionInfo.cs" />
-    <Compile Include="Inspector\Entities\SubObjects\EntityInspectionInfo.cs" />
-    <Compile Include="Inspector\Entities\SubObjects\IInspectionInfo.cs" />
-    <Compile Include="Inspector\Entities\SubObjects\PropertyGroupInspectionInfo.cs" />
-    <Compile Include="Logging\GraphDesignerLogger.cs" />
-    <Compile Include="Messages\EntityDeselected.cs" />
-    <Compile Include="Messages\EntityFocused.cs" />
-    <Compile Include="Messages\EntitySelected.cs" />
-    <Compile Include="Messaging\GraphDesignerMessenger.cs" />
-    <Compile Include="Extensions\MipEditableTexture2D.cs" />
-    <Compile Include="GUI\Execution\ExecutionOptions.cs" />
-    <Compile Include="GUI\Model\AmplifiedRenderHandler.cs" />
-    <Compile Include="GUI\Navigation\CameraAnimator.cs" />
-    <Compile Include="GUI\Toolbox\NodeToolboxWindow.cs" />
-    <Compile Include="ParameterEditors\Controls\ExpressionTextBox.cs" />
-    <Compile Include="ParameterEditors\Windows\ExpressionPopupWindow.cs" />
-    <Compile Include="Inspector\Ports\GeneralPortController.cs" />
-    <Compile Include="Inspector\Ports\PortInspectorControl.cs" />
-    <Compile Include="Inspector\Ports\StatePortController.cs" />
-    <Compile Include="Logging\NodeDesignerLogger.cs" />
-    <Compile Include="Logging\NodeLogMessage.cs" />
-    <Compile Include="Messages\FrameNodes.cs" />
-    <Compile Include="Messages\MarkEdge.cs" />
-    <Compile Include="Messages\MarkNode.cs" />
-    <Compile Include="Messages\MarkPort.cs" />
-    <Compile Include="ParameterEditors\AttributeParameterEditor.cs" />
-    <Compile Include="ParameterEditors\EditorTreeViewItem.cs" />
-    <Compile Include="ParameterEditors\OptionalListParameterEditor.cs" />
-    <Compile Include="ParameterEditorManager.cs" />
-    <Compile Include="ParameterEditors\SelectListParameterEditor.cs" />
-    <Compile Include="ParameterEditors\Windows\AdvancedExpressionWindow.cs" />
-    <Compile Include="ParameterEditors\Windows\ParameterCreateWindow.cs" />
-    <Compile Include="Projects\GraphFindManager.cs" />
-    <Compile Include="Tools\IProcedureItem.cs" />
-    <Compile Include="Inspector\Graphs\GraphParameterEditorWindow.cs" />
-    <Compile Include="Messages\ChangeParameterValue.cs" />
-    <Compile Include="Messages\ShowVisualHandles.cs" />
-    <Compile Include="ParameterEditors\ChoiceParameterEditor.cs" />
-    <Compile Include="ParameterEditors\BoolParameterEditor.cs" />
-    <Compile Include="ParameterEditors\DoubleParameterEditor.cs" />
-    <Compile Include="ParameterEditors\ParameterEditorTreeViewItem.cs" />
-    <Compile Include="ParameterEditors\IntParameterEditor.cs" />
-    <Compile Include="ParameterEditors\RecursiveParameterEditor.cs" />
-    <Compile Include="ParameterEditors\ListParameterEditor.cs" />
-    <Compile Include="ParameterEditors\CompoundParameterEditor.cs" />
-    <Compile Include="ParameterEditors\ObjectParameterEditor.cs" />
-    <Compile Include="ParameterEditors\ParameterEditor.cs" />
-    <Compile Include="ParameterEditors\ArgumentTreeViewItem.cs" />
-    <Compile Include="ParameterEditors\FloatParameterEditor.cs" />
-    <Compile Include="ParameterEditors\PrimitiveParameterEditor.cs" />
-    <Compile Include="ParameterEditors\FileParameterEditor.cs" />
-    <Compile Include="ParameterEditors\FolderParameterEditor.cs" />
-    <Compile Include="ParameterEditors\StringParameterEditor.cs" />
-    <Compile Include="ParameterEditors\Windows\FolderSelectorWindow.cs" />
-    <Compile Include="ParameterEditors\Windows\FileSelectorWindow.cs" />
-    <Compile Include="Extensions\PointExtension.cs" />
-    <Compile Include="GraphDesignerService.cs" />
-    <Compile Include="GUI\Basic\Animations\GrowAnimation.cs" />
-    <Compile Include="GUI\Basic\Animations\PortAnimation.cs" />
-    <Compile Include="GUI\Basic\Animations\RectangleAnimation.cs" />
-    <Compile Include="GUI\Basic\Animations\ShrinkAnimation.cs" />
-    <Compile Include="GUI\Basic\Animations\SpringAnimation.cs" />
-    <Compile Include="GUI\Basic\RectangleF.cs" />
-    <Compile Include="GUI\Basic\ExtensibleTexture.cs" />
-    <Compile Include="GUI\Basic\TransitionColor.cs" />
-    <Compile Include="GUI\Execution\GraphTrailExecutionBinding.cs" />
-    <Compile Include="GUI\Execution\GameThreadWorker.cs" />
-    <Compile Include="GUI\GraphControl.cs" />
-    <Compile Include="GUI\Interactions\ContextMenuHandler.cs" />
-    <Compile Include="GUI\Toolbox\ToolboxItemControl.cs" />
-    <Compile Include="GUI\Toolbox\NodeToolboxWindowOld.cs" />
-    <Compile Include="Handlers\GraphCreator.cs" />
-    <Compile Include="GUI\GraphDocumentControl.cs" />
-    <Compile Include="GUI\GraphEditorSettings.cs" />
-    <Compile Include="GUI\Interactions\EdgeDrawer.cs" />
-    <Compile Include="GUI\Interactions\GraphDropHandler.cs" />
-    <Compile Include="GUI\Interactions\InteractionHandler.cs" />
-    <Compile Include="GUI\Interactions\SelectionRectangleHandler.cs" />
-    <Compile Include="GUI\Model\Drawing\EdgeLine.cs" />
-    <Compile Include="GUI\Model\Drawing\NodeLabel.cs" />
-    <Compile Include="GUI\Model\Drawing\NodeRectangle.cs" />
-    <Compile Include="GUI\Model\Drawing\PortLabel.cs" />
-    <Compile Include="GUI\Model\Drawing\PortShape.cs" />
-    <Compile Include="GUI\Model\ISelectableUnit.cs" />
-    <Compile Include="GUI\Model\ShadowHandler.cs" />
-    <Compile Include="GUI\Model\VisualEdge.cs" />
-    <Compile Include="GUI\Model\VisualGraph.cs" />
-    <Compile Include="GUI\Model\VisualNode.cs" />
-    <Compile Include="GUI\Model\VisualPort.cs" />
-    <Compile Include="GUI\Navigation\Camera2D.cs" />
-    <Compile Include="Inspector\Graphs\GraphGeneralController.cs" />
-    <Compile Include="Inspector\Graphs\GraphInspectorControl.cs" />
-    <Compile Include="Inspector\Graphs\GraphParameterController.cs" />
-    <Compile Include="Inspector\Nodes\GeneralController.cs" />
-    <Compile Include="Inspector\InspectorWindow.cs" />
-    <Compile Include="Inspector\Nodes\NodeInspectorControl.cs" />
-    <Compile Include="Inspector\Nodes\ParameterController.cs" />
-    <Compile Include="Inspector\Nodes\PopUpInspectorWindow.cs" />
-    <Compile Include="Messages\GraphContentChanged.cs" />
-    <Compile Include="Messages\GraphExecutionFinished.cs" />
-    <Compile Include="Messages\NodeClicked.cs" />
-    <Compile Include="Messages\ProcedureExecutionFinished.cs" />
-    <Compile Include="Environments\DesignerResourceManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\ProcedureItemLoader.cs" />
-    <Compile Include="Tools\ComponentProcedureItem.cs" />
-    <Compile Include="Tools\SystemProcedureItem.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">

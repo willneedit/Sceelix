@@ -80,15 +80,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversions\GeoLocationConversions.cs" />
-    <Compile Include="Data\GeoLocation.cs" />
-    <Compile Include="Helpers\ProjectionHelper.cs" />
-    <Compile Include="Parameters\GeoLocationParameter.cs" />
-    <Compile Include="Procedures\GisLoadProcedure.cs" />
-    <Compile Include="Procedures\OsmLoadProcedure.cs" />
-    <Compile Include="Parameters\ProjectionParameter.cs" />
-    <Compile Include="Parameters\ProjectionSelectParameter.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

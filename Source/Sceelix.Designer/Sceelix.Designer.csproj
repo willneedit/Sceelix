@@ -79,67 +79,67 @@
     <ApplicationIcon>LogoWhite.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Annotations\ApplicationSettingsAttribute.cs" />
-    <Compile Include="Annotations\DesignerServiceAttribute.cs" />
-    <Compile Include="Extensions\ColorExtension.cs" />
-    <Compile Include="Extensions\EditableTexture2D.cs" />
-    <Compile Include="Extensions\Texture2DExtender.cs" />
-    <Compile Include="GUI\MenuHandling\ContextMenuManager.cs" />
-    <Compile Include="GUI\MenuHandling\MenuEntry.cs" />
-    <Compile Include="GUI\UndoRedo\DelegateUndoRedoOperation.cs" />
-    <Compile Include="GUI\UndoRedo\UndoBufferExtensions.cs" />
-    <Compile Include="Helpers\UrlHelper.cs" />
-    <Compile Include="Login\ILoginManager.cs" />
-    <Compile Include="GUI\Controls\ExtendedTextbox.cs" />
-    <Compile Include="GUI\MenuHandling\BarMenuService.cs" />
-    <Compile Include="GUI\PluginViewWindow.cs" />
-    <Compile Include="GUI\Controls\OverlayingStackPanel.cs" />
-    <Compile Include="GUI\Controls\LineContainer.cs" />
-    <Compile Include="GUI\Controls\SyntaxHighlightingTextbox.cs" />
-    <Compile Include="Login\SteamLoginManager.cs" />
-    <Compile Include="Managers\ExitManager.cs" />
-    <Compile Include="Managers\LoadingManager.cs" />
-    <Compile Include="Login\StandardLoginManager.cs" />
-    <Compile Include="Managers\WindowChangeManager.cs" />
-    <Compile Include="Managers\ExtendedInputManager.cs" />
-    <Compile Include="Managers\ExtendedUIRenderer.cs" />
-    <Compile Include="Managers\FpsCounter.cs" />
-    <Compile Include="GUI\AboutWindow.cs" />
-    <Compile Include="GUI\Controls\ColorPickerControl.cs" />
-    <Compile Include="GUI\Controls\DoubleContentControl.cs" />
-    <Compile Include="GUI\Controls\EnumDropDownButton.cs" />
-    <Compile Include="GUI\Controls\EqualStackPanel.cs" />
-    <Compile Include="GUI\Controls\LinkTextBlock.cs" />
-    <Compile Include="GUI\Controls\ListView.cs" />
-    <Compile Include="GUI\Controls\MultiSampleRenderTargetControl.cs" />
-    <Compile Include="GUI\Controls\PopupWindow.cs" />
-    <Compile Include="Managers\CursorManager.cs" />
-    <Compile Include="GUI\Dialogs\OXDialogs.cs" />
-    <Compile Include="GUI\ExtractFolderWindow.cs" />
-    <Compile Include="GUI\MenuHandling\BarMenuEntry.cs" />
-    <Compile Include="GUI\MenuHandling\BarMenuManager.cs" />
-    <Compile Include="Managers\UIZoomManager.cs" />
-    <Compile Include="Managers\WindowAnimator.cs" />
-    <Compile Include="Managers\WindowDragHandler.cs" />
-    <Compile Include="Managers\FpsSettingsManager.cs" />
-    <Compile Include="Messaging\ClientSizeChanged.cs" />
-    <Compile Include="Messaging\DesignerLoaded.cs" />
-    <Compile Include="Messaging\FileDragDrop.cs" />
-    <Compile Include="Messaging\FileDragEnter.cs" />
-    <Compile Include="Utils\BuildDistribution.cs" />
-    <Compile Include="Utils\BuildPlatform.cs" />
-    <Compile Include="Utils\DigitalRuneUtils.cs" />
-    <Compile Include="Utils\MouseHelper.cs" />
-    <Compile Include="GUI\LoadingWindow.cs" />
-    <Compile Include="GUI\MenuControls\BarMenu.cs" />
-    <Compile Include="GUI\MenuControls\CheckMenuChild.cs" />
-    <Compile Include="GUI\MenuControls\VerticalScrollViewer.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     <Compile Include="GUI\MenuControls\MenuChild.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GUI\MenuControls\SeparatorControl.cs" />
-    <Compile Include="GUI\Controls\NumericSpinControl.cs" />
-    <Compile Include="Managers\SceelixFocusManager.cs" />
+     
+     
+     
     <Compile Include="GUI\TreeViewControls\ObjectTreeView.Column.cs">
       <DependentUpon>ObjectTreeView.cs</DependentUpon>
     </Compile>
@@ -149,89 +149,89 @@
     <Compile Include="GUI\TreeViewControls\ObjectTreeView.ItemHolder.cs">
       <DependentUpon>ObjectTreeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Managers\GraphicsWindowManager.cs" />
-    <Compile Include="GUI\Windows\ProgressWindow.cs" />
-    <Compile Include="Interfaces\IUpdateableElement.cs" />
-    <Compile Include="Logging\LoggingManager.cs" />
-    <Compile Include="Messaging\CompoundMessage.cs" />
-    <Compile Include="Interfaces\IServiceable.cs" />
-    <Compile Include="Services\IServiceLocator.cs" />
-    <Compile Include="Utils\DelayedEventRunner.cs" />
-    <Compile Include="Utils\LightHttpServer.cs" />
-    <Compile Include="Utils\SystemInfoManager.cs" />
-    <Compile Include="Managers\MainMenuManager.cs" />
-    <Compile Include="GUI\Controls\ToolTipControl.cs" />
-    <Compile Include="GUI\Controls\TransparentCanvasImage.cs" />
-    <Compile Include="GUI\TreeViewControls\ObjectTreeView.cs" />
-    <Compile Include="GUI\TreeViewControls\LayoutTreeView.cs" />
-    <Compile Include="GUI\TreeViewControls\OptionalControl.cs" />
-    <Compile Include="GUI\TreeViewControls\SelectableTreeViewItem.cs" />
-    <Compile Include="GUI\TreeViewControls\SelectableTreeViewItemContent.cs" />
-    <Compile Include="GUI\TreeViewControls\LayoutControl.cs" />
-    <Compile Include="GUI\TreeViewControls\SuperTreeView.cs" />
-    <Compile Include="Extensions\UIControlExtension.cs" />
-    <Compile Include="GUI\Windows\InputWindow.cs" />
-    <Compile Include="GUI\Windows\AnimatedWindow.cs" />
-    <Compile Include="GUI\Controls\FlexibleStackPanel.cs" />
-    <Compile Include="GUI\Controls\IconMenuStrip.cs" />
-    <Compile Include="GUI\Controls\ImageButton.cs" />
-    <Compile Include="GUI\Controls\IRenderableComponent.cs" />
-    <Compile Include="GUI\TreeViewControls\ITreeViewControl.cs" />
-    <Compile Include="GUI\MenuControls\MultiContextMenu.cs" />
-    <Compile Include="GUI\MenuControls\IMenuControl.cs" />
-    <Compile Include="GUI\Controls\RenderTargetControl.cs" />
-    <Compile Include="GUI\Controls\RenderTargetGraphicsScreen.cs" />
-    <Compile Include="GUI\Controls\TextButton.cs" />
-    <Compile Include="GUI\TreeViewControls\TreeView.cs" />
-    <Compile Include="GUI\TreeViewControls\TreeViewItem.cs" />
-    <Compile Include="GUI\Windows\DialogWindow.cs" />
-    <Compile Include="GUI\Windows\MessageWindow.cs" />
-    <Compile Include="GUI\ZipStreamStorage.cs" />
-    <Compile Include="Layouts\LayoutManager.cs" />
-    <Compile Include="Layouts\WindowLocation.cs" />
-    <Compile Include="Logging\DesignerLogger.cs" />
-    <Compile Include="Messaging\ProcessExiting.cs" />
-    <Compile Include="Messaging\ExceptionThrown.cs" />
-    <Compile Include="Messaging\MessageManager.cs" />
-    <Compile Include="Messaging\ScreenshotRequest.cs" />
-    <Compile Include="Messaging\Subscriber.cs" />
-    <Compile Include="Settings\SettingsRegistry.cs" />
-    <Compile Include="Settings\Types\ChoiceApplicationField.cs" />
-    <Compile Include="Helpers\ClipboardHelper.cs" />
-    <Compile Include="Utils\FileDialogExtender.cs" />
-    <Compile Include="Utils\SceelixApplicationInfo.cs" />
-    <Compile Include="Utils\OSVersionInfo.cs" />
-    <Compile Include="Annotations\DesignerLibraryAttribute.cs" />
-    <Compile Include="Plugins\PluginManager.cs" />
-    <Compile Include="Annotations\DesignerWindowAttribute.cs" />
-    <Compile Include="SceelixGame.cs" />
-    <Compile Include="Managers\ScreenManager.cs" />
-    <Compile Include="GUI\Controls\FpsTextBox.cs" />
-    <Compile Include="Services\ServiceManager.cs" />
-    <Compile Include="Settings\ApplicationField.cs" />
-    <Compile Include="Settings\ApplicationSettings.cs" />
-    <Compile Include="Layouts\Layout.cs" />
-    <Compile Include="DesignerProgram.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings\Types\DoubleApplicationField.cs" />
-    <Compile Include="Settings\Types\FloatApplicationField.cs" />
-    <Compile Include="Settings\Types\StringApplicationField.cs" />
-    <Compile Include="Settings\Types\IntApplicationField.cs" />
-    <Compile Include="Settings\DesignerSettings.cs" />
-    <Compile Include="Settings\PrimitiveApplicationField.cs" />
-    <Compile Include="Settings\Types\BoolApplicationField.cs" />
-    <Compile Include="Settings\SettingsManager.cs" />
-    <Compile Include="Settings\SettingsWindow.cs" />
-    <Compile Include="Settings\Types\TimeApplicationField.cs" />
-    <Compile Include="Utils\GDIExtender.cs" />
-    <Compile Include="Utils\EmbeddedResources.cs" />
-    <Compile Include="Conversions\SceeListExtender.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     <Compile Include="Utils\SceelixWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Utils\Synchronizer.cs" />
-    <Compile Include="Helpers\ValidationHelper.cs" />
-    <Compile Include="Helpers\WindowHelper.cs" />
+     
+     
+     
   </ItemGroup>
   <!--Use intellilock for License enforcement versions -->
   <!--For Steam versions, include these extra libraries and files -->

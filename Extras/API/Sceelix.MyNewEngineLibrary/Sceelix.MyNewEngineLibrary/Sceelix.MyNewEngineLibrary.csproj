@@ -67,20 +67,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01 - Hello World\HelloWorldProcedure.cs" />
-    <Compile Include="02 - Hello IO\HelloIOProcedure.cs" />
-    <Compile Include="03 - Hello Parameters\HelloParametersProcedure.cs" />
-    <Compile Include="04 - Hello More Parameters\HelloMoreParametersProcedure.cs" />
-    <Compile Include="05 - Hello Attributes\HelloAttributesProcedure.cs" />
-    <Compile Include="06 - Hello New Entity\XMLEntityLoadProcedure.cs" />
-    <Compile Include="06 - Hello New Entity\XMLEntityMergeProcedure.cs" />
-    <Compile Include="06 - Hello New Entity\XMLEntity.cs" />
-    <Compile Include="07 - Hello Functions and Types\HelloFunctions.cs" />
-    <Compile Include="07 - Hello Functions and Types\SimpleType.cs" />
-    <Compile Include="08 - Hello Updates\MyObsoleteProcedure.cs" />
-    <Compile Include="09 - Hello Sceelix Entities\ActorOnSurfaceProcedure.cs" />
-    <Compile Include="09 - Hello Sceelix Entities\MeshToPathExampleProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMeFirst.txt" />

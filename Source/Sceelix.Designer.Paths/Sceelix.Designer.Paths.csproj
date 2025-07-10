@@ -25,9 +25,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\PathDrawComponent.cs" />
-    <Compile Include="Translators\PathTranslator.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">

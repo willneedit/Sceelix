@@ -60,54 +60,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Annotations\UnityJsonConverterAttribute.cs" />
-    <Compile Include="Attributes\UnityMeta.cs" />
-    <Compile Include="Attributes\UnityMetaParser.cs" />
-    <Compile Include="Data\BillboardComponent.cs" />
-    <Compile Include="Data\CustomComponent.cs" />
-    <Compile Include="Data\UnityComponent.cs" />
-    <Compile Include="Data\MeshComponent.cs" />
-    <Compile Include="Data\MeshInstanceComponent.cs" />
-    <Compile Include="Data\SurfaceComponent.cs" />
-    <Compile Include="Data\UnityEntity.cs" />
-    <Compile Include="Data\UnityMeshWithMaterials.cs" />
-    <Compile Include="Helpers\SerializationHelper.cs" />
-    <Compile Include="Helpers\UnityAttributeHelper.cs" />
-    <Compile Include="Procedures\UnityComponentModifyProcedure.cs" />
-    <Compile Include="Procedures\UnityEntityComponentProcedure.cs" />
-    <Compile Include="Procedures\UnityEntityCreateProcedure.cs" />
-    <Compile Include="Procedures\UnityEntityGroupProcedure.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serialization\BillboardComponentConverter.cs" />
-    <Compile Include="Serialization\EntityGroupConverter.cs" />
-    <Compile Include="Serialization\BillboardConverter.cs" />
-    <Compile Include="Serialization\CustomComponentConverter.cs" />
-    <Compile Include="Serialization\CustomMaterialConverter.cs" />
-    <Compile Include="Serialization\EntityConverter.cs" />
-    <Compile Include="Serialization\MeshComponentConverter.cs" />
-    <Compile Include="Serialization\PointEntityConverter.cs" />
-    <Compile Include="Serialization\PathEntityConverter.cs" />
-    <Compile Include="Serialization\UnityMeshConverter.cs" />
-    <Compile Include="Serialization\MeshEntityConverter.cs" />
-    <Compile Include="Serialization\MeshInstanceComponentConverter.cs" />
-    <Compile Include="Serialization\MeshInstanceEntityConverter.cs" />
-    <Compile Include="Serialization\MeshMaterialConverter.cs" />
-    <Compile Include="Serialization\ObjectConverter.cs" />
-    <Compile Include="Serialization\ResourcePathConverter.cs" />
-    <Compile Include="Serialization\SurfaceComponentConverter.cs" />
-    <Compile Include="Serialization\SurfaceEntityConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\BlendColorSurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\ColorSurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\FurSurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\MultiTextureSurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\ResourceContent.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\ResourceContentConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\SingleTextureSurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\SurfaceMaterials\SurfaceMaterialConverter.cs" />
-    <Compile Include="Serialization\TextureSlotConverter.cs" />
-    <Compile Include="Serialization\UnityComponentConverter.cs" />
-    <Compile Include="Serialization\UnityContractResolver.cs" />
-    <Compile Include="Serialization\UnityEntityConverter.cs" />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Actors\Sceelix.Actors.csproj">
