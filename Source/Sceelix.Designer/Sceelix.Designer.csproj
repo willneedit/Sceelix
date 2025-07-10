@@ -27,7 +27,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <CreateDocumentation>true</CreateDocumentation>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFramework>net48</TargetFramework>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <!-- If it is a Window application, start it as a WinExe, otherwise as an Exe. -->
@@ -459,7 +459,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
