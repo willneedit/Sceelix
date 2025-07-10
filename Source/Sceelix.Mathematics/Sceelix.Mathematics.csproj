@@ -52,69 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-    <Compile Include="Spatial\GenericPartitionTree.Section.cs">
-      <DependentUpon>GenericPartitionTree.cs</DependentUpon>
-    </Compile>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">
       <Project>{17d451d4-b445-4f61-adfe-963f42d702b0}</Project>
       <Name>Sceelix.Core</Name>

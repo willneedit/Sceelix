@@ -53,68 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-    <Compile Include="GUI\LogWindowEntry.cs">
-      <DependentUpon>LogWindow.cs</DependentUpon>
-    </Compile>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">
       <Project>{17D451D4-B445-4F61-ADFE-963F42D702B0}</Project>
       <Name>Sceelix.Core</Name>
