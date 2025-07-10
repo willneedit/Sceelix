@@ -168,13 +168,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Reference Include="ImageProcessor, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\ImageProcessor.2.3.2.0\lib\net40\ImageProcessor.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=2.0.17.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\log4net.2.0.17\lib\net45\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Json.NET 9.0.1\Net40\Newtonsoft.Json.dll</HintPath>
@@ -194,6 +187,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
+
+    <PackageReference Include="log4net" Version="2.0.17.0" />
+    <PackageReference Include="ImageProcessor" Version="2.3.2.0" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ClipboardCopy_16x16.png" />

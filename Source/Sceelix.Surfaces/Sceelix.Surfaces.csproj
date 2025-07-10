@@ -39,10 +39,6 @@
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <ItemGroup>
-    <Reference Include="ImageProcessor, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\ImageProcessor.2.3.2.0\lib\net40\ImageProcessor.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,6 +47,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+
+    <PackageReference Include="ImageProcessor" Version="2.3.2.0" />
   </ItemGroup>
   <ItemGroup>
      
