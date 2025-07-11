@@ -39,9 +39,6 @@
   <Import Project="..\Common.targets" />
   <Import Project="..\DigitalRune.targets" />
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\..\Packages\log4net.2.0.5\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -51,6 +48,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+
+    <PackageReference Include="log4net" Version="2.0.17.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sceelix.Core\Sceelix.Core.csproj">

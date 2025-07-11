@@ -15,10 +15,6 @@
   <Import Project="..\Common.targets" />
   <Import Project="..\DigitalRune.targets" />
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\log4net.2.0.5\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Json.NET 9.0.1\Net40\Newtonsoft.Json.dll</HintPath>
@@ -34,6 +30,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+
+    <PackageReference Include="log4net" Version="2.0.17.0" />
   </ItemGroup>
   <ItemGroup>
      
