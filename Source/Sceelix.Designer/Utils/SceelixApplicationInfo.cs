@@ -185,7 +185,10 @@ namespace Sceelix.Designer.Utils
             {
                 Assembly assembly = Assembly.GetExecutingAssembly();
                 FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-                return new Version(fileVersionInfo.ProductVersion);
+
+                // Just the MMBR, no revision, no version tag
+                string[] parts = fileVersionInfo.ProductVersion.Split('+');
+                return new Version(parts[0]);
             }
         }
     }

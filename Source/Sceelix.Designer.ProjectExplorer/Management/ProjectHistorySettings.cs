@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 using Sceelix.Designer.Settings;
+using Sceelix.Designer.Utils;
 
 namespace Sceelix.Designer.ProjectExplorer.Management
 {
@@ -35,9 +36,7 @@ namespace Sceelix.Designer.ProjectExplorer.Management
         {
             get
             {
-                Assembly assembly = Assembly.GetExecutingAssembly();
-                FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-                var currentVersion = new Version(fileVersionInfo.ProductVersion);
+                var currentVersion = SceelixApplicationInfo.CurrentVersion;
 
                 if (String.IsNullOrWhiteSpace(LastLoadedVersion.Value)
                     || new Version(LastLoadedVersion.Value) < currentVersion)
