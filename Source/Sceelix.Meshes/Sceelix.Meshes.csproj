@@ -38,73 +38,6 @@
   </PropertyGroup>
   <Import Project="..\Common.targets" />
   <ItemGroup>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="StraightSkeletonNet, Version=1.0.6200.31566, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\StraightSkeleton\StraightSkeletonNet.dll</HintPath>
-    </Reference>
     <ProjectReference Include="..\..\Extras\Net3dBool\src\Net3dBool\Net3dBool.csproj">
       <Project>{0534baa3-a47f-4e48-ad92-7898ecd1812d}</Project>
       <Name>Net3dBool</Name>
@@ -130,6 +63,7 @@
 
     <PackageReference Include="AssimpNet" Version="3.3.1" />
     <PackageReference Include="LibTessDotNet" Version="1.1.15" />
+    <PackageReference Include="SkeletonNet" Version="1.0.0" />
   </ItemGroup>
   
 </Project>

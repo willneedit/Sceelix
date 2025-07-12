@@ -15,8 +15,8 @@ using Sceelix.Meshes.Algorithms;
 using Sceelix.Meshes.Data;
 using Sceelix.Meshes.Extensions;
 using Sceelix.Meshes.Operations;
-using StraightSkeletonNet;
-using StraightSkeletonNet.Primitives;
+using SkeletonNet;
+using SkeletonNet.Primitives;
 
 namespace Sceelix.Meshes.Procedures
 {
