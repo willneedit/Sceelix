@@ -40,9 +40,6 @@
   <Import Project="..\Common.targets" />
   <Import Project="..\DigitalRune.targets" />
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\Libs\Antlr\Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,6 +48,7 @@
     <Reference Include="System.Xml" />
 
     <PackageReference Include="log4net" Version="2.0.17.0" />
+    <PackageReference Include="Antlr3.Runtime" Version="3.5.1" />
   </ItemGroup>
   <ItemGroup>
      

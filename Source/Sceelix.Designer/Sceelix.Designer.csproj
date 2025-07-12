@@ -141,37 +141,7 @@
     </When>
   </Choose>
   <!--Steam includes end here -->
-  <Choose>
-    <When Condition=" '$(Platform)' == 'Windows32' Or '$(Platform)' == 'Windows64' ">
-      <ItemGroup>
-        <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
-          <SpecificVersion>False</SpecificVersion>
-          <HintPath>..\..\Libs\HtmlRenderer\Windows\HtmlRenderer.dll</HintPath>
-        </Reference>
-        <Reference Include="HtmlRenderer.WinForms, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
-          <SpecificVersion>False</SpecificVersion>
-          <HintPath>..\..\Libs\HtmlRenderer\Windows\HtmlRenderer.WinForms.dll</HintPath>
-        </Reference>
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
-          <SpecificVersion>False</SpecificVersion>
-          <HintPath>..\..\Libs\HtmlRenderer\Mono\HtmlRenderer.dll</HintPath>
-        </Reference>
-        <Reference Include="HtmlRenderer.WinForms, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
-          <SpecificVersion>False</SpecificVersion>
-          <HintPath>..\..\Libs\HtmlRenderer\Mono\HtmlRenderer.WinForms.dll</HintPath>
-        </Reference>
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\Json.NET 9.0.1\Net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="NVorbis, Version=0.8.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\DigitalRune Mono\Linux\NVorbis.dll</HintPath>
@@ -190,6 +160,9 @@
 
     <PackageReference Include="log4net" Version="2.0.17.0" />
     <PackageReference Include="ImageProcessor" Version="2.3.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="HtmlRenderer.Core" Version="1.5.0.6" />
+    <PackageReference Include="HtmlRenderer.WinForms" Version="1.5.0.6" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ClipboardCopy_16x16.png" />

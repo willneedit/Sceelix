@@ -100,38 +100,7 @@
      
      
   </ItemGroup>
-  <ItemGroup Condition="'$(Platform)' == 'Windows32'">
-    <None Include="..\..\Libs\Assimp\Windows32\Assimp32.dll">
-      <Link>Extras\Assimp32.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Platform)' == 'Windows64'">
-    <None Include="..\..\Libs\Assimp\Windows64\Assimp64.dll">
-      <Link>Extras\Assimp64.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Platform)' == 'Linux'">
-    <None Include="..\..\Libs\Assimp\Linux\libassimp.so">
-      <Link>Extras\libassimp.so</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Platform)' == 'MacOS'">
-    <None Include="..\..\Libs\Assimp\MacOS\Resources\libassimp.dylib">
-      <Link>Extras\libassimp.dylib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
   <ItemGroup>
-    <Reference Include="AssimpNet, Version=3.3.1.0, Culture=neutral, PublicKeyToken=0d51b391f59f42a6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\Assimp\$(Platform)\AssimpNet.dll</HintPath>
-    </Reference>
-    <Reference Include="LibTessDotNet">
-      <HintPath>..\..\Libs\LibTessDotNet\LibTessDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="StraightSkeletonNet, Version=1.0.6200.31566, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\StraightSkeleton\StraightSkeletonNet.dll</HintPath>
@@ -158,6 +127,9 @@
     </ProjectReference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+
+    <PackageReference Include="AssimpNet" Version="3.3.1" />
+    <PackageReference Include="LibTessDotNet" Version="1.1.15" />
   </ItemGroup>
   
 </Project>
