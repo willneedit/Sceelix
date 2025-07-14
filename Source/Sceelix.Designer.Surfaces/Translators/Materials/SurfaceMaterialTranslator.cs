@@ -31,8 +31,7 @@ namespace Sceelix.Designer.Surfaces.Translators.Materials
             _graphicsService = services.Get<IGraphicsService>();
         }
 
-
-
+        // TODO Redo for use of triangle strips
         private IEnumerable<Submesh> InitializeBuffers(SurfaceEntity surfaceEntity, Material sceelixMaterial)
         {
             int width = surfaceEntity.NumColumns;
@@ -41,46 +40,48 @@ namespace Sceelix.Designer.Surfaces.Translators.Materials
             //int numTriangles = (width - 1) * (height - 1) * 2;
             //int numVertices = width * height;
             var interpolation = GetSurfaceInterpolation(surfaceEntity);
-            Func<int, int, int, int, int[]> action = interpolation == SurfaceInterpolation.TopRight ?
+            Func<int, int, int, int, int[]> quad2tris = interpolation == SurfaceInterpolation.TopRight ?
                                         (tl, tr, ll, lr) => new[] { tl, tr, ll, tr, lr, ll } :
                                         (Func<int, int, int, int, int[]>)((tl, tr, ll, lr) => new[] { tl, tr, lr, tl, lr, ll });
 
             //int vertexStride = default(TR).VertexDeclaration.VertexStride;
             var prepareVertexFunc = GetPrepareVertexFunc(surfaceEntity, sceelixMaterial);
 
-            int halfVertices = (int) Math.Sqrt(MaxVertexCount);
-            int widthPieces = (int) (width/(double) halfVertices) + 1;
-            int heightPieces = (int) (height/(double) halfVertices) + 1;
+            int halfVertices = (int)Math.Sqrt(MaxVertexCount);
+            int widthPieces = (int)(width / (double)halfVertices) + 1;
+            int heightPieces = (int)(height / (double)halfVertices) + 1;
 
             for (int i = 0; i < widthPieces; i++)
             {
-                int startingK = i*halfVertices - ((i > 0) ? 1 : 0);
+                // (halfVertices-1) because we need the halfvertices at the edges for *both*
+                // adjacent submeshes to stitch the seams.
+                int startingK = i * (halfVertices - 1);
                 int endingK = Math.Min(startingK + halfVertices, width);
                 int numColumns = endingK - startingK;
 
                 for (int j = 0; j < heightPieces; j++)
                 {
-                    int startingL = j*halfVertices - ((j > 0) ? 1 : 0);
+                    int startingL = j * (halfVertices - 1);
                     int endingL = Math.Min(startingL + halfVertices, height);
                     int numRows = endingL - startingL;
 
-                    int numVertices = numColumns*numRows;
-                    int numTriangles = (numColumns - 1)*(numRows - 1)*2;
+                    int numVertices = numColumns * numRows;
+                    int numTriangles = (numColumns - 1) * (numRows - 1) * 2;
 
                     bool[] visibleArray = new bool[numVertices];
                     TR[] vertexArray = new TR[numVertices];
-                    int[] indicesArray = new int[numTriangles*3];
+                    int[] indicesArray = new int[numTriangles * 3];
 
 
 
-                    ParallelHelper.For(0,numColumns, (k) =>
+                    ParallelHelper.For(0, numColumns, (k) =>
                     {
                         for (int l = 0; l < numRows; l++)
                         {
                             var vertex = prepareVertexFunc(new Coordinate(startingK + k, startingL + l));//surfaceEntity, sceelixMaterial, 
                             if (vertex.HasValue)
                             {
-                                var location = l*numColumns + k;
+                                var location = l * numColumns + k;
 
                                 vertexArray[location] = vertex.Value;
                                 visibleArray[location] = true;
@@ -90,7 +91,7 @@ namespace Sceelix.Designer.Surfaces.Translators.Materials
 
                     ParallelHelper.For(0, numColumns - 1, (k) =>
                     {
-                        int indexPosition = k*(numRows - 1)*6;
+                        int indexPosition = k * (numRows - 1) * 6;
 
                         for (int l = 0; l < numRows - 1; l++)
                         {
@@ -99,9 +100,9 @@ namespace Sceelix.Designer.Surfaces.Translators.Materials
                             int lowerLeft = (l + 1) * numColumns + k;
                             int lowerRight = (l + 1) * numColumns + (k + 1);
 
-                            
 
-                            var indices = action(topLeft, topRight, lowerLeft, lowerRight);
+
+                            var indices = quad2tris(topLeft, topRight, lowerLeft, lowerRight);
                             if (visibleArray[indices[0]] && visibleArray[indices[1]] && visibleArray[indices[2]])
                             {
                                 indicesArray[indexPosition++] = indices[0];
@@ -117,7 +118,7 @@ namespace Sceelix.Designer.Surfaces.Translators.Materials
                             }
                         }
                     });
-                    
+
                     var submesh = new Submesh
                     {
                         PrimitiveType = PrimitiveType.TriangleList,
