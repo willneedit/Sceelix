@@ -94,7 +94,11 @@
 	<PropertyGroup>
 		<Libz>"$(MSBuildProjectDirectory)\..\..\Tools\LibZ\libz.exe"</Libz>
 	</PropertyGroup>
-	
+
+	<!-- Set default so that the IDE won't complain about missing references -->
+	<PropertyGroup Condition="'$(LibraryType)' == ''">
+		<LibraryType>Linux</LibraryType>
+	</PropertyGroup>
 	
 	<!--Target Name="SpicNSpan" AfterTargets="Clean" Condition=" '$(Configuration)' == 'Licensed' " >
 		<RemoveDir Directories="$(OUTDIR)"/>
