@@ -2,10 +2,12 @@
 using System.Linq;
 using Sceelix.Core.Annotations;
 using Sceelix.Core.Extensions;
+using Sceelix.Core.IO;
 using Sceelix.Core.Parameters;
 using Sceelix.Core.Procedures;
 using Sceelix.Mathematics.Data;
 using Sceelix.Mathematics.Parameters;
+using Sceelix.Meshes.Data;
 using Sceelix.Unity.Data;
 
 namespace Sceelix.Unity.Procedures
@@ -151,8 +153,8 @@ namespace Sceelix.Unity.Procedures
             /// The camera clipping planes.
             /// </summary>
             private readonly CompoundParameter _parameterClippingPlane = new CompoundParameter("Clipping Plane",
-                new FloatParameter("Near", 0.3f) {Description = "The near clipping plane distance."},
-                new FloatParameter("Far", 1000) {Description = "The far clipping plane distance."});
+                new FloatParameter("Near", 0.3f) { Description = "The near clipping plane distance." },
+                new FloatParameter("Far", 1000) { Description = "The far clipping plane distance." });
 
             /// <summary>
             /// Camera's depth in the camera rendering order.
@@ -295,6 +297,11 @@ namespace Sceelix.Unity.Procedures
             /// </summary>
             private readonly BoolParameter _parameterIsTrigger = new BoolParameter("Is Trigger", true);
 
+            /// <summary>
+            /// Other options for the creation of the Game Object.
+            /// </summary>
+            private readonly SelectListParameter<MCSourceParameter> _parameterOptions = new SelectListParameter<MCSourceParameter>("Source", "GameObject");
+
 
 
             public MeshColliderComponentParameter()
@@ -308,12 +315,56 @@ namespace Sceelix.Unity.Procedures
             {
                 UnityComponent component = new UnityComponent("Mesh Collider");
 
+                MCSourceParameter options = _parameterOptions.Items.FirstOrDefault();
+                if (options != null) options.Run(entity, component);
+
                 component.SetGlobalAttribute("IsConvex", _parameterIsConvex.Value);
                 component.SetGlobalAttribute("IsTrigger", _parameterIsTrigger.Value);
 
                 entity.GameComponents.Add(component);
             }
         }
+
+        #region Mesh Collider - Source selection
+        public abstract class MCSourceParameter : CompoundParameter
+        {
+            protected MCSourceParameter(string label)
+                : base(label)
+            {
+            }
+
+            protected internal abstract void Run(UnityEntity entity, UnityComponent component);
+        }
+
+        public class FromGameObjectParameter : MCSourceParameter
+        {
+            protected FromGameObjectParameter() : base("GameObject") { }
+
+            protected internal override void Run(UnityEntity entity, UnityComponent component) {}
+        }
+
+        public class FromMeshParameter : MCSourceParameter
+        {
+            /// <summary>
+            /// The mesh entity from which to create the unity object.
+            /// </summary>
+            private readonly SingleInput<MeshEntity> _input = new SingleInput<MeshEntity>("Input");
+
+            protected FromMeshParameter() : base("Own Mesh") { }
+
+            protected internal override void Run(UnityEntity unityEntity, UnityComponent component)
+            {
+                MeshEntity meshEntity = _input.Read();
+
+                var originalScope = meshEntity.BoxScope;
+
+                // Translate the collision mesh relative to the entity mesh
+                meshEntity.InsertInto(new BoxScope(translation: originalScope.Translation - unityEntity.BoxScope.Translation, sizes: originalScope.Sizes));
+
+                component.SetGlobalAttribute("Mesh", meshEntity);
+            }
+        }
+        #endregion
 
         #endregion
 
