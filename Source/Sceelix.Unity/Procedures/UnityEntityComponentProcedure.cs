@@ -356,6 +356,9 @@ namespace Sceelix.Unity.Procedures
             {
                 MeshEntity meshEntity = _input.Read();
 
+                // Reset Scope
+                meshEntity.BoxScope = new BoxScope(Vector3D.XVector, Vector3D.YVector, Vector3D.ZVector, meshEntity.BoxScope.Translation, meshEntity.BoxScope.Sizes);
+
                 var originalScope = meshEntity.BoxScope;
 
                 // Translate the collision mesh relative to the entity mesh

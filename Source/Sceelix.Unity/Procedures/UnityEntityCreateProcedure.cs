@@ -192,6 +192,9 @@ namespace Sceelix.Unity.Procedures
             {
                 MeshEntity meshEntity = _input.Read();
 
+                // Reset Scope
+                meshEntity.BoxScope = new BoxScope(Vector3D.XVector, Vector3D.YVector, Vector3D.ZVector, meshEntity.BoxScope.Translation, meshEntity.BoxScope.Sizes);
+
                 var originalScope = meshEntity.BoxScope;
                 unityEntity.BoxScope = originalScope;
                 unityEntity.RelativeScale = new Vector3D(1 / originalScope.Sizes.X, 1 / originalScope.Sizes.Y, 1 / originalScope.Sizes.Z).MakeValid();
