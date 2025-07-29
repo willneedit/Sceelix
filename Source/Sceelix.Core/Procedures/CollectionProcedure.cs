@@ -200,7 +200,7 @@ namespace Sceelix.Core.Procedures
             /// <summary>
             /// Type of aggregative operation to perform.
             /// </summary>
-            private readonly ChoiceParameter _parameterChoice = new ChoiceParameter("Operation", "Sum", "Sum", "Average", "Maximum", "Minimum");
+            private readonly ChoiceParameter _parameterChoice = new ChoiceParameter("Operation", "Sum", "Cumulation", "Sum", "Average", "Maximum", "Minimum");
 
             /// <summary>
             /// Attribute where to store the aggregated value.
@@ -218,6 +218,22 @@ namespace Sceelix.Core.Procedures
 
             internal override IEnumerable<IEntity> Apply(List<IEntity> entities)
             {
+                if (_parameterChoice.Value == "Cumulation")
+                {
+                    dynamic cumulated = null;
+
+                    foreach (var obj in entities)
+                    {
+                        dynamic val = _parameterValue.Get(obj);
+
+                        if (cumulated == null) cumulated = val;
+                        else cumulated += val;
+
+                        _parameterAggregatedValue[obj] = cumulated;
+                    }
+                    return entities;                                        
+                }
+
                 var attributeValues = (List<dynamic>) entities.Select(x => _parameterValue.Get(x)).ToList();
 
                 dynamic finalResult = null;
