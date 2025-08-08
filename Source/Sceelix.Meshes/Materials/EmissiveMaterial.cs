@@ -14,11 +14,12 @@ namespace Sceelix.Meshes.Materials
     {
         private static readonly AttributeKey ColorKey = new GlobalAttributeKey("DefaultColor");
 
+        private static readonly AttributeKey IntensityKey = new GlobalAttributeKey("Intensity");
 
-
-        public EmissiveMaterial(Color defaultColor)
+        public EmissiveMaterial(Color defaultColor, float intensity)
         {
             DefaultColor = defaultColor;
+            Intensity = intensity;
         }
 
 
@@ -27,6 +28,12 @@ namespace Sceelix.Meshes.Materials
         {
             get { return this.GetAttribute<Color>(ColorKey); }
             set { this.SetAttribute(ColorKey, value); }
+        }
+
+        public float Intensity
+        {
+            get { return this.GetAttribute<float>(IntensityKey); }
+            set { this.SetAttribute(IntensityKey, value); }
         }
     }
 }

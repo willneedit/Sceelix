@@ -99,6 +99,8 @@ namespace Sceelix.Meshes.Procedures
             /// </summary>
             private readonly ColorParameter _parameterColor = new ColorParameter("Color", new Color(255, 0, 0));
 
+            private readonly FloatParameter _parameterIntensity = new FloatParameter("Intensity", 0.0f);
+
 
 
             public EmissiveMaterialParameter()
@@ -110,7 +112,7 @@ namespace Sceelix.Meshes.Procedures
 
             protected internal override void Apply(MeshEntity entity)
             {
-                entity.Material = new EmissiveMaterial(_parameterColor.Value);
+                entity.Material = new EmissiveMaterial(_parameterColor.Value, _parameterIntensity.Value);
             }
         }
 
