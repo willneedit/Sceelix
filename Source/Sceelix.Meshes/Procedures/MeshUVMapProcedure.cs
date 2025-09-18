@@ -96,6 +96,11 @@ namespace Sceelix.Meshes.Procedures
             /// </summary>
             private readonly BoolParameter _parameterFlipV = new BoolParameter("Flip V", true);
 
+            /// <summary>
+            /// Indicates if the U and V coordinates should be swapped with each other.
+            /// </summary>
+            private readonly BoolParameter _parameterSwapUV = new BoolParameter("Swap U with V", false);
+
 
 
             public FlipUVParameter()
@@ -105,20 +110,23 @@ namespace Sceelix.Meshes.Procedures
 
 
 
-            public static MeshEntity Apply(MeshEntity meshEntity, bool flipU, bool flipV)
+            public static MeshEntity Apply(MeshEntity meshEntity, bool flipU, bool flipV, bool swapUV)
             {
                 foreach (Face face in meshEntity)
-                foreach (HalfVertex halfVertex in face.HalfVertices)
-                {
-                    Vector2D textureCoordinate = halfVertex.UV0;
-                    float u = textureCoordinate.X, v = textureCoordinate.Y;
-                    if (flipU)
-                        u = -u;
-                    if (flipV)
-                        v = -v;
+                    foreach (HalfVertex halfVertex in face.HalfVertices)
+                    {
+                        Vector2D textureCoordinate = halfVertex.UV0;
+                        float u = textureCoordinate.X, v = textureCoordinate.Y;
+                        if (flipU)
+                            u = -u;
+                        if (flipV)
+                            v = -v;
 
-                    halfVertex.UV0 = new Vector2D(u, v);
-                }
+                        if (swapUV)
+                            halfVertex.UV0 = new Vector2D(v, u);
+                        else
+                            halfVertex.UV0 = new Vector2D(u, v);
+                    }
 
                 return meshEntity;
             }
@@ -127,7 +135,7 @@ namespace Sceelix.Meshes.Procedures
 
             protected internal override MeshEntity UVMap(MeshEntity meshEntity)
             {
-                return Apply(meshEntity, _parameterFlipU.Value, _parameterFlipV.Value);
+                return Apply(meshEntity, _parameterFlipU.Value, _parameterFlipV.Value, _parameterSwapUV.Value);
             }
         }
 
