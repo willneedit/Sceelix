@@ -471,7 +471,7 @@ namespace Sceelix.Meshes.Procedures
 
             protected internal override void Apply(MeshEntity entity)
             {
-                var newMaterial = new CustomMaterial {ShaderName = _parameterShaderName.Value};
+                var newMaterial = new CustomMaterial(_parameterShaderName.Value);
 
                 foreach (CustomMaterialPropertyParameter parameter in _parameterPropertyList.Items) newMaterial.SetGlobalAttribute(parameter.Name, parameter.Value);
 
