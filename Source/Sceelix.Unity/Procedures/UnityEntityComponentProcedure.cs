@@ -99,7 +99,10 @@ namespace Sceelix.Unity.Procedures
             /// </summary>
             private readonly ChoiceParameter _parameterRenderMode = new ChoiceParameter("Render Mode", "Auto", "Auto", "ForcePixel", "ForceVertex");
 
-
+            /// <summary>
+            /// The lighting bake type, as interpreted by the Unity editor and engine.
+            /// </summary>
+            private readonly ChoiceParameter _parameterBakeType = new ChoiceParameter("Bake Type", "Mixed", "Baked", "Realtime", "Mixed");
 
             protected LightComponentParameter()
                 : base("Light")
@@ -119,6 +122,7 @@ namespace Sceelix.Unity.Procedures
                 component.SetGlobalAttribute("Bounce Intensity", _parameterBounceIntensity.Value);
                 component.SetGlobalAttribute("Render Mode", _parameterRenderMode.Value);
                 component.SetGlobalAttribute("Shadow Type", _parameterShadows.Value);
+                component.SetGlobalAttribute("Bake Type", _parameterBakeType.Value);
 
                 entity.GameComponents.Add(component);
             }
