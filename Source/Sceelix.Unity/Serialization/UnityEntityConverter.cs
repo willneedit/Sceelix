@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Sceelix.Actors.Data;
 using Sceelix.Serialization;
 using Sceelix.Unity.Annotations;
 using Sceelix.Unity.Data;
@@ -103,11 +104,20 @@ namespace Sceelix.Unity.Serialization
 
             serializer.SetObject("UnityEntity", unityEntity);
 
+            // The Unity components
             writer.WritePropertyName("Components");
             writer.WriteStartArray();
             foreach (UnityComponent unityComponent in unityEntity.GameComponents)
                 serializer.Serialize(writer, unityComponent);
             writer.WriteEndArray();
+
+            // The actor children of this Unity entity
+            writer.WritePropertyName("SubEntities");
+            writer.WriteStartArray();
+            foreach(IActor current in unityEntity.SubActors)
+                serializer.Serialize(writer, current);
+            writer.WriteEndArray();
+
 
             writer.WriteEndObject();
         }

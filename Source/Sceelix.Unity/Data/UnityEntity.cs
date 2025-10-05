@@ -96,13 +96,18 @@ namespace Sceelix.Unity.Data
             set;
         }
 
-
+        public List<IActor> SubActors
+        {
+            get;
+            set;
+        } = new List<IActor>();
 
         public override IEntity DeepClone()
         {
-            UnityEntity unityEntity = (UnityEntity) base.DeepClone();
+            UnityEntity unityEntity = (UnityEntity)base.DeepClone();
 
-            unityEntity.GameComponents = GameComponents.Select(x => (UnityComponent) x.DeepClone()).ToList();
+            unityEntity.GameComponents = GameComponents.Select(x => (UnityComponent)x.DeepClone()).ToList();
+            unityEntity.SubActors = SubActors.Select(x => (IActor)x.DeepClone()).ToList();
 
             return unityEntity;
         }

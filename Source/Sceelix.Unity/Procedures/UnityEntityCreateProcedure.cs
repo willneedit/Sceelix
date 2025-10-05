@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Sceelix.Actors.Data;
 using Sceelix.Core.Annotations;
 using Sceelix.Core.IO;
@@ -359,7 +361,30 @@ namespace Sceelix.Unity.Procedures
 
         #endregion
 
-        #region From Group
+        #region From Actors
+
+        public class FromActorsParameter : UnityEntityCreateParameter
+        {
+            /// <summary>Set of actors to be grouped.</summary>
+            private readonly CollectiveInput<IActor> _input = new CollectiveInput<IActor>("Actors");
+
+            protected FromActorsParameter()
+                : base("From Actors")
+            {
+            }
+
+            protected internal override void Run(UnityEntity unityEntity)
+            {
+                IEnumerable<IActor> actors = _input.Read();
+
+                foreach(IActor actor in actors)
+                    actor.Attributes.ComplementAttributesTo(unityEntity.Attributes);
+
+                unityEntity.BoxScope = BoxScope.Identity;
+
+                unityEntity.SubActors = actors.ToList();
+            }
+        }
 
         #endregion
     }

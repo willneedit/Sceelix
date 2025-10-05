@@ -10,6 +10,7 @@ using Sceelix.Core.Procedures;
 using Sceelix.Mathematics.Data;
 using Newtonsoft.Json;
 using Sceelix.Unity.Annotations;
+using Sceelix.Logging;
 
 namespace Sceelix.MyNewEngineLibrary
 {
@@ -230,6 +231,7 @@ namespace Sceelix.MyNewEngineLibrary
 
         protected override void Run()
         {
+            Environment.GetService<ILogger>().Log("Unity Entity Group Create is obsolete: Use 'Unity Entity Create' with 'From Actors'", LogType.Warning);
             IEnumerable<IActor> actors = this._input.Read();
 
             UnityEntityGroup ueg = new UnityEntityGroup(actors)

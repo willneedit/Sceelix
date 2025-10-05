@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.28)
 
 project ("Sceelix")
 
-set(CPACK_PACKAGE_VERSION 1.1.0)
+set(CPACK_PACKAGE_VERSION 1.2.0)
 
 set(SolutionRoot ${CMAKE_SOURCE_DIR}/Source)
 set(SetupDataDir ${CMAKE_SOURCE_DIR}/Setup)
